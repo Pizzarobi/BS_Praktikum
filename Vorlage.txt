@@ -1,0 +1,8 @@
+Compile command
+gcc -Wall -c -pthread -o example.o example.c
+
+Linken des Objektcode
+gcc -Wall -pthread -o example example.o
+
+Alles in einem 
+gcc -Wall -pthread example.c -o example
