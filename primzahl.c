@@ -29,7 +29,7 @@ void *calcPrimes(void *args){
 
     // Check every number in Range
     for (x = aRange->start; x < (aRange->end); x++){
-        // Prime Algorithn
+        // Prime Algorithm
         int res = primeAlg(x);
         // if(res)
         //     printf("Testing: %d = %d\n", x, res);
@@ -51,8 +51,8 @@ int main(){
     int i = 0;
 
     // specify complete amount of numbers starting from 1
-    const int endNumber = 500000;
-    const int threadAmount = 10;
+    const int endNumber = 1000000;
+    const int threadAmount = 8;
     float perThread = (float)endNumber / threadAmount;
 
     // Range Array
@@ -62,16 +62,16 @@ int main(){
 
     // Initialize Ranges and start threads ???
     for(i = 0; i < threadAmount; i++){
+        // Set individual ranges
         aRange[i].start = i*perThread+1;
         aRange[i].end = i*perThread+perThread;
-        // Set individual ranges
-        printf("aRange[%d].start =  %10d\n",i,aRange[i].start);
-        printf("aRange[%d].end   =  %10d\n",i,aRange[i].end);
+
+        //printf("aRange[%d].start =  %10d\n",i,aRange[i].start);
+        //printf("aRange[%d].end   =  %10d\n",i,aRange[i].end);
     }
 
     // force last aRange[] to endNumber
     aRange[threadAmount-1].end = endNumber;
-    printf("aRange[%d].end   =  %10d\n",threadAmount-1,aRange[threadAmount-1].end);
 
     // start threads
     for(i = 0; i < threadAmount; i++){
@@ -82,13 +82,6 @@ int main(){
     for(i = 0; i < threadAmount; i++){
         pthread_join(thread[i],NULL);
     }
-
-    // Starte Thread mit Funktion calcPrimes
-    //pthread_create(&thread, NULL, &calcPrimes, &aRange);
-
-    //return value
-    //int *retValue;
-    //pthread_join(thread,(void**)(&retValue));
 
     return 0;
 }
@@ -109,6 +102,9 @@ int main(){
 
 // threads   = 4
 // time      = 29.34s user 0.00s system 242% cpu 12.123 total
+
+// threads   = 8
+// time      = 40.94s user 0.00s system 474% cpu 8.621 total
 
 //thread     = 10
 // time      = 45.81s user 0.03s system 571% cpu 8.023 total
