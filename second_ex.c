@@ -7,7 +7,7 @@
 #include <string.h>
 
 struct student{
-    char *name;
+    char* name;
     size_t len;
 };
 
@@ -16,7 +16,7 @@ void *example_fct(void *args){
     struct student* aStudent = (struct student*)args;
     aStudent->len = strlen(aStudent->name);
 
-    return aStudent;
+    return 0;
     // Die Übergabe wird zurück auf einen int-Pointer gecastet
     //uintptr_t *inParam = (uintptr_t *)args;
     // Der Inhalt des Pointers wird ausgegeben
@@ -29,10 +29,8 @@ int main(){
     pthread_t thread;
 
     struct student aStudent;
-    aStudent.name = "Roberto";
+    aStudent.name = "Robert Kalmar";
     aStudent.len = 0;
-
-    struct student *bStudent;
 
     // Starte einen Thread mit der auszuführenden Funktion example_fct
     // Zudem wir einen Parameter übergeben. Konfigurations-parameter werden nicht genutzt daher NULL.
@@ -40,11 +38,11 @@ int main(){
     //pthread_create(&threadC, NULL, &example_fct, NULL);
 
     // Warte auf Beendigung der beiden Threads
-    pthread_join(thread, (void**)(&bStudent));
+    pthread_join(thread, NULL);
 
     //Inhalt des Rückgabeparameters ausgeben
-    printf("Name : %s\n", bStudent->name);
-    printf("Laenge: %lu\n",bStudent->len);
+    printf("Name : %s\n", aStudent.name);
+    printf("Laenge: %lu\n",aStudent.len);
 
     return 0;
 }
