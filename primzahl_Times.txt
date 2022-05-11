@@ -1,0 +1,34 @@
+TIMES
+endNumber = 500000
+
+threads   = 1
+time      = 33.69s user 0.26s system 99% cpu 33.957 total
+
+threads   = 2
+time      = 27.90s user 0.00s system 137% cpu 20.232 total
+time      = 34.84s user 0.29s system 137% cpu 25.502 total
+time      = 28.29s user 0.00s system 138% cpu 20.451 total
+
+threads   = 3
+time      = 27.74s user 0.00s system 187% cpu 14.819 total
+
+threads   = 4
+time      = 29.34s user 0.00s system 242% cpu 12.123 total
+
+threads   = 6
+time      = 34.21s user 0.00s system 375% cpu 9.120 total
+
+threads   = 8
+time      = 40.94s user 0.00s system 474% cpu 8.621 total
+
+thread    = 10
+time      = 45.81s user 0.03s system 571% cpu 8.023 total
+
+thread    = 12
+time      = 48.35s user 0.02s system 646% cpu 7.482 total
+
+thread    = 14
+time      = 49.24s user 0.00s system 648% cpu 7.590 total
+
+threads   = 16
+time      = 50.01s user 0.01s system 710% cpu 7.038 total

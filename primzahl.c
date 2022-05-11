@@ -5,6 +5,7 @@
 #include <pthread.h>
 #include <stdint.h>
 #include <string.h>
+#include <stdlib.h>
 
 struct primeRange{
     int start;
@@ -33,34 +34,42 @@ void *calcPrimes(void *args){
         int res = primeAlg(x);
         // if(res)
         //     printf("Testing: %d = %d\n", x, res);
-   
     }
 
     printf("Thread done to %10d\n",aRange->end);
-
     pthread_exit(NULL);
 }
 
 // Main
 // take max Range and divide in ThreadCount
 // Send those Ranges to thread counts
-// either print Ranges or return in Array?
-
-int main(){
-    // count variables
+int main(int argc, char **argv){
+    // variables
     int i = 0;
+    int endNumber = 1000;
+    int threadAmount = 1;
+
+    // Argument handler
+    if(argc < 3){
+        // wrong number of Arguments
+        printf("Please specify 2 Arguments.\n");
+        printf("For example: %s 10000 6\nEnding program",argv[0]);
+
+        return 0;
+    }else if(argc == 3){
+        // set user variables
+        endNumber = atoi(argv[1]);
+        threadAmount = atoi(argv[2]);
+    }
 
     // specify complete amount of numbers starting from 1
-    const int endNumber = 1000000;
-    const int threadAmount = 8;
     float perThread = (float)endNumber / threadAmount;
 
-    // Range Array
+    // initialize range and thread Array
     struct primeRange aRange[threadAmount];
-    // thread Array
     pthread_t thread[threadAmount];
 
-    // Initialize Ranges and start threads ???
+    // Set ranges
     for(i = 0; i < threadAmount; i++){
         // Set individual ranges
         aRange[i].start = i*perThread+1;
@@ -69,7 +78,6 @@ int main(){
         //printf("aRange[%d].start =  %10d\n",i,aRange[i].start);
         //printf("aRange[%d].end   =  %10d\n",i,aRange[i].end);
     }
-
     // force last aRange[] to endNumber
     aRange[threadAmount-1].end = endNumber;
 
@@ -83,31 +91,6 @@ int main(){
         pthread_join(thread[i],NULL);
     }
 
+    printf("Every thread done!\n");
     return 0;
 }
-
-
-// TIMES
-// endNumber = 500000
-
-// threads   = 1
-// time      = 33.69s user 0.26s system 99% cpu 33.957 total
-
-// threads   = 2
-// time      = 34.84s user 0.29s system 137% cpu 25.502 total
-// time      = 28.29s user 0.00s system 138% cpu 20.451 total
-
-// threads   = 3
-// time      =
-
-// threads   = 4
-// time      = 29.34s user 0.00s system 242% cpu 12.123 total
-
-// threads   = 8
-// time      = 40.94s user 0.00s system 474% cpu 8.621 total
-
-//thread     = 10
-// time      = 45.81s user 0.03s system 571% cpu 8.023 total
-
-// threads   = 16
-// time      = 50.01s user 0.01s system 710% cpu 7.038 total
