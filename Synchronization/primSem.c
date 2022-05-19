@@ -23,13 +23,14 @@ int primeAlg(int x){
 
 void *calcPrimes(void *p){
     int primeAmount = 0;
+    int myNumber = 0;
     while(count < endNumber){
         pthread_mutex_lock(&mutex);
-            count++;
+            myNumber = count++;
         pthread_mutex_unlock(&mutex);
-        int res = primeAlg(count-1);
+        int res = primeAlg(myNumber);
         if(res){
-            printf("%10d , %d,\n",count, res);
+            //printf("%10d , %d,\n",count, res);
             primeAmount++;
         }
     }
@@ -44,16 +45,16 @@ int main(int argc, char **argv){
     int threadAmount = 1;
 
     // Argument handler
-    if(argc < 3){
-        // wrong number of Arguments
-        printf("Please specify 2 Arguments.\n");
-        printf("For example: %s 10000 6\nEnding program",argv[0]);
-
-        return 0;
-    }else if(argc == 3){
+    if(argc == 3){
         // set user variables
         endNumber = atoi(argv[1]);
         threadAmount = atoi(argv[2]);
+    } else {
+        // wrong number of Arguments
+        printf("Please specify 2 Arguments.\n");
+        printf("For example: %s 10000 6\nEnding program\n",argv[0]);
+
+        return 0;
     }
 
     // initialize thread Array
@@ -70,6 +71,6 @@ int main(int argc, char **argv){
     }
 
     printf("Every thread done!\n");
-    printf("count = %d, endNumber = %d",count,endNumber);
+    printf("count = %d, endNumber = %d\n",count,endNumber);
     return 0;
 }
