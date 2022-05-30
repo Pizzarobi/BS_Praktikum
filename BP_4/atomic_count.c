@@ -1,16 +1,26 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <pthread.h>
-#include <semaphore.h>
 #include <stdatomic.h>
 
+// Dieser Code ist beinahe Identisch zu sem_count.c
+// deswegen sind Funktions kommentare in sem_count.c
+
+// Atomare integer
 atomic_int count = 0;
+atomic_int countInc = 0;
+
 const int MAX_CNT = 100*1000*1000;
 
 void *increment(void *p){
-    long inc = (long)p;
+    long inc = (long)p+1;
     printf("Thread inc = %ld\n", inc);
-    while(count < MAX_CNT){
+    while(countInc < MAX_CNT){
+        // seltener übertretung von countInc von MAX_CNT, da der Vergleich nicht geschützt ist
+        if(countInc >= MAX_CNT)
+            break;
+        // keine Semaphoren notwendig, da atomar
+        countInc++;
         count+=inc;
     }
 
@@ -29,18 +39,19 @@ int main(int argc, char *argv[]){
 
     pthread_t thread[threadAmount];
 
-    // start threads
+    // starten der threads
     for(long i = 0; i<threadAmount; i++){
-        pthread_create(&thread[i], NULL, increment, (void *)(i+1));
+        pthread_create(&thread[i], NULL, increment, (void *)(i));
     }
 
-    // Waiting for threads to end
+    // warten auf beendigung der threads
     for(int i=0; i<threadAmount; i++){
         pthread_join(thread[i], NULL);
     }
 
     printf("Every thread done!\n");
     printf("count = %d\n",count);
+    printf("countInc = %d\n",countInc);
     printf("MAX_CNT = %d\n",MAX_CNT);
 
     return 0;
