@@ -1,0 +1,15 @@
+.\objects\display.o: display.c
+.\objects\display.o: C:\bin\Arm\Packs\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include\STM32F4xx.h
+.\objects\display.o: C:\bin\Arm\Packs\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include\stm32f407xx.h
+.\objects\display.o: C:\bin\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\core_cm4.h
+.\objects\display.o: C:\bin\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\display.o: C:\bin\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_version.h
+.\objects\display.o: C:\bin\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_compiler.h
+.\objects\display.o: C:\bin\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_armcc.h
+.\objects\display.o: C:\bin\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\mpu_armv7.h
+.\objects\display.o: C:\bin\Arm\Packs\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include\system_stm32f4xx.h
+.\objects\display.o: _mcpr_stm32f407.h
+.\objects\display.o: C:\bin\Keil_v5\ARM\ARMCC\Bin\..\include\inttypes.h
+.\objects\display.o: display.h
+.\objects\display.o: func.h
+.\objects\display.o: C:\bin\Keil_v5\ARM\ARMCC\Bin\..\include\string.h

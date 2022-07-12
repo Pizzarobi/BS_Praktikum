@@ -12,7 +12,7 @@
 node_t* list = NULL;
 pthread_t t1,t2, print;
 pthread_mutex_t mutex;
-pthread_cond_t data_in = PTHREAD_COND_INITIALIZER;
+sem_t data_in;
 pthread_cond_t data_out = PTHREAD_COND_INITIALIZER;
 int data_in_list = 0;
 sem_t sem;
@@ -59,7 +59,6 @@ void* producer()
 void* consumer()
 {
     pthread_mutex_lock(&mutex);
-    srand(time(NULL));
     //while(data_in_list <= 0){
         //pthread_cond_wait(&data_in, &mutex);
         sem_post(&data_in);
@@ -75,8 +74,11 @@ void* consumer()
 
 int main()
 {
+    // Generate random number with current time seed
     srand(time(NULL));
+    // initalize List
     list = list_create_node(0);
+    // insert 10 random Datapoints to front of list
     for(int i = 0; i < MAX_LIST-1; i++){
             list_insert_front(&list, rand());
             data_in_list++;
@@ -84,14 +86,14 @@ int main()
 
     pthread_mutex_init(&mutex, NULL);
 
-   for(int i = 0; i < MAX_LIST; i++)
-   {
-	    pthread_create(&t1, NULL, producer, NULL);
+    for(int i = 0; i < MAX_LIST; i++)
+    {
+        pthread_create(&t1, NULL, producer, NULL);
         pthread_create(&t2, NULL, consumer, NULL);
 
         pthread_join(t1, NULL);
         pthread_join(t2, NULL);
-   }
+    }
 
     list_free(&list);
 

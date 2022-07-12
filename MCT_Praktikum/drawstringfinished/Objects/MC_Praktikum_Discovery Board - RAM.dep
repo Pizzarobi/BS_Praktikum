@@ -1,0 +1,58 @@
+Dependencies for Project 'MC_Praktikum', Target 'Discovery Board - RAM': (DO NOT MODIFY !)
+CompilerVersion: 5060960::V5.06 update 7 (build 960)::.\ARMCC
+F (.\main.c)(0x624C409C)(-c --cpu Cortex-M4.fp.sp -D__EVAL -g -O0 --apcs=interwork --split_sections-I.\RTE\_Discovery_Board_-_RAM-IC:\bin\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include-IC:\bin\Arm\Packs\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-IC:\bin\Arm\Packs\Keil\STM32F4xx_DFP\2.16.0-D__UVISION_VERSION="536" -D_RTE_ -DSTM32F407xx -D_RTE_ -DVECT_TAB_SRAM-o .\objects\main.o --omf_browse .\objects\main.crf --depend .\objects\main.d)
+I (C:\bin\Arm\Packs\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include\STM32F4xx.h)(0x61112330)
+I (C:\bin\Arm\Packs\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include\stm32f407xx.h)(0x61112330)
+I (C:\bin\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\core_cm4.h)(0x60D44B52)
+I (C:\bin\Keil_v5\ARM\ARMCC\include\stdint.h)(0x602585EE)
+I (C:\bin\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_version.h)(0x60D44B52)
+I (C:\bin\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_compiler.h)(0x60D44B52)
+I (C:\bin\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_armcc.h)(0x60D44B52)
+I (C:\bin\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\mpu_armv7.h)(0x60D44B52)
+I (C:\bin\Arm\Packs\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include\system_stm32f4xx.h)(0x61112330)
+I (_mcpr_stm32f407.h)(0x624C2A1C)
+I (C:\bin\Keil_v5\ARM\ARMCC\include\inttypes.h)(0x602585EE)
+I (func.h)(0x624C3139)
+I (fonts.h)(0x624C2A1D)
+I (display.h)(0x624C2A1C)
+I (C:\bin\Keil_v5\ARM\ARMCC\include\string.h)(0x602585EE)
+F (.\_mcpr_stm32f407.c)(0x624C2A1C)(-c --cpu Cortex-M4.fp.sp -D__EVAL -g -O0 --apcs=interwork --split_sections-I.\RTE\_Discovery_Board_-_RAM-IC:\bin\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include-IC:\bin\Arm\Packs\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-IC:\bin\Arm\Packs\Keil\STM32F4xx_DFP\2.16.0-D__UVISION_VERSION="536" -D_RTE_ -DSTM32F407xx -D_RTE_ -DVECT_TAB_SRAM-o .\objects\_mcpr_stm32f407.o --omf_browse .\objects\_mcpr_stm32f407.crf --depend .\objects\_mcpr_stm32f407.d)
+I (_mcpr_stm32f407.h)(0x624C2A1C)
+I (C:\bin\Arm\Packs\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include\stm32f4xx.h)(0x61112330)
+I (C:\bin\Arm\Packs\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include\stm32f407xx.h)(0x61112330)
+I (C:\bin\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\core_cm4.h)(0x60D44B52)
+I (C:\bin\Keil_v5\ARM\ARMCC\include\stdint.h)(0x602585EE)
+I (C:\bin\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_version.h)(0x60D44B52)
+I (C:\bin\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_compiler.h)(0x60D44B52)
+I (C:\bin\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_armcc.h)(0x60D44B52)
+I (C:\bin\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\mpu_armv7.h)(0x60D44B52)
+I (C:\bin\Arm\Packs\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include\system_stm32f4xx.h)(0x61112330)
+F (.\func.h)(0x624C3139)()
+F (.\fonts.h)(0x624C2A1D)()
+F (.\display.c)(0x624C2A1C)(-c --cpu Cortex-M4.fp.sp -D__EVAL -g -O0 --apcs=interwork --split_sections-I.\RTE\_Discovery_Board_-_RAM-IC:\bin\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include-IC:\bin\Arm\Packs\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-IC:\bin\Arm\Packs\Keil\STM32F4xx_DFP\2.16.0-D__UVISION_VERSION="536" -D_RTE_ -DSTM32F407xx -D_RTE_ -DVECT_TAB_SRAM-o .\objects\display.o --omf_browse .\objects\display.crf --depend .\objects\display.d)
+I (C:\bin\Arm\Packs\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include\STM32F4xx.h)(0x61112330)
+I (C:\bin\Arm\Packs\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include\stm32f407xx.h)(0x61112330)
+I (C:\bin\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\core_cm4.h)(0x60D44B52)
+I (C:\bin\Keil_v5\ARM\ARMCC\include\stdint.h)(0x602585EE)
+I (C:\bin\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_version.h)(0x60D44B52)
+I (C:\bin\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_compiler.h)(0x60D44B52)
+I (C:\bin\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_armcc.h)(0x60D44B52)
+I (C:\bin\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\mpu_armv7.h)(0x60D44B52)
+I (C:\bin\Arm\Packs\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include\system_stm32f4xx.h)(0x61112330)
+I (_mcpr_stm32f407.h)(0x624C2A1C)
+I (C:\bin\Keil_v5\ARM\ARMCC\include\inttypes.h)(0x602585EE)
+I (display.h)(0x624C2A1C)
+I (func.h)(0x624C3139)
+I (C:\bin\Keil_v5\ARM\ARMCC\include\string.h)(0x602585EE)
+F (.\display.h)(0x624C2A1C)()
+F (RTE\Device\STM32F407VGTx\startup_stm32f407xx.s)(0x624C38A0)(--cpu Cortex-M4.fp.sp --pd "__EVAL SETA 1" -g --apcs=interwork -I.\RTE\_Discovery_Board_-_RAM-IC:\bin\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include-IC:\bin\Arm\Packs\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-IC:\bin\Arm\Packs\Keil\STM32F4xx_DFP\2.16.0--pd "__UVISION_VERSION SETA 536" --pd "_RTE_ SETA 1" --pd "STM32F407xx SETA 1" --pd "_RTE_ SETA 1"--list .\listings\startup_stm32f407xx.lst --xref -o .\objects\startup_stm32f407xx.o --depend .\objects\startup_stm32f407xx.d)
+F (RTE\Device\STM32F407VGTx\system_stm32f4xx.c)(0x624C2A2A)(-c --cpu Cortex-M4.fp.sp -D__EVAL -g -O0 --apcs=interwork --split_sections-I.\RTE\_Discovery_Board_-_RAM-IC:\bin\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include-IC:\bin\Arm\Packs\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-IC:\bin\Arm\Packs\Keil\STM32F4xx_DFP\2.16.0-D__UVISION_VERSION="536" -D_RTE_ -DSTM32F407xx -D_RTE_ -DVECT_TAB_SRAM-o .\objects\system_stm32f4xx.o --omf_browse .\objects\system_stm32f4xx.crf --depend .\objects\system_stm32f4xx.d)
+I (C:\bin\Arm\Packs\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include\stm32f4xx.h)(0x61112330)
+I (C:\bin\Arm\Packs\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include\stm32f407xx.h)(0x61112330)
+I (C:\bin\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\core_cm4.h)(0x60D44B52)
+I (C:\bin\Keil_v5\ARM\ARMCC\include\stdint.h)(0x602585EE)
+I (C:\bin\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_version.h)(0x60D44B52)
+I (C:\bin\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_compiler.h)(0x60D44B52)
+I (C:\bin\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_armcc.h)(0x60D44B52)
+I (C:\bin\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\mpu_armv7.h)(0x60D44B52)
+I (C:\bin\Arm\Packs\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include\system_stm32f4xx.h)(0x61112330)
